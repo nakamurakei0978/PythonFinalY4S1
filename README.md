@@ -1,7 +1,7 @@
 ## Get project running:
-# mysql.service requried {default port: 3306, create new db: api_python}
-# node required
-# python required
+#mysql.service requried {default port: 3306, create new db: api_python}
+#node required
+#python required
 
 # server folder(Flask):{
   # create new venv: python3 -m venv venv
