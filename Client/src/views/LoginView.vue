@@ -32,7 +32,7 @@ onMounted(()=>{
 async function handleSubmit(){
     try{
         const credentials = btoa(`${username.value}:${password.value}`)
-        const res = await fetch('http://192.168.100.11:5000/login',{
+        const res = await fetch('http://127.0.0.1:5000/login',{
             headers: {
                 'Authorization': 'Basic '+credentials
             }

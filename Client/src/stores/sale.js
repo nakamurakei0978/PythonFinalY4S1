@@ -10,7 +10,7 @@ export const useSaleStore = defineStore('sale',()=>{
 
     async function getSaleLists(limit){
         try{
-            const res = await fetch(`http://localhost:5000/sale?limit=${limit}&page=${page.value}`)
+            const res = await fetch(`http://127.0.0.1:5000/sale?limit=${limit}&page=${page.value}`)
             const data = await res.json()
             sale_lists.value = data.sales
             totalPage.value = data.totalPage

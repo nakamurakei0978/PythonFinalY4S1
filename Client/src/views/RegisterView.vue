@@ -31,7 +31,7 @@ async function handleSubmit() {
     if (password.value === confirm_password.value) {
         try {
             isSubmiting.value = true
-            await fetch('http://192.168.100.11:5000/register', {
+            await fetch('http://127.0.0.1:5000/register', {
                 body: JSON.stringify({
                     'username': username.value,
                     'password': password.value

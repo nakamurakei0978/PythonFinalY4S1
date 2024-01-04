@@ -22,7 +22,7 @@ export const useProductStore = defineStore('product', () => {
         formData.append('category_id', category_id)
         formData.append('image', imageFile)
         try{
-            const res = await axios.post('http://192.168.100.11:5000/post_product',formData,{
+            const res = await axios.post('http://127.0.0.1:5000/post_product',formData,{
                 headers: { 'Content-Type': 'multipart/form-data' }
             })
             await getProducts()
@@ -34,7 +34,7 @@ export const useProductStore = defineStore('product', () => {
 
     async function getProducts(){
         try{
-            const res = await axios.get('http://192.168.100.11:5000/get_products',{
+            const res = await axios.get('http://127.0.0.1:5000/get_products',{
                 params: {
                     limit: limitRows.value,
                     page: page.value,
@@ -60,7 +60,7 @@ export const useProductStore = defineStore('product', () => {
     async function searchProducts(text){
         text = text.toLowerCase()
         try{
-            const res = await axios.get('http://192.168.100.11:5000/search_products',{
+            const res = await axios.get('http://127.0.0.1:5000/search_products',{
                 params:{
                     limit: limitRows.value,
                     page: page.value,
@@ -95,7 +95,7 @@ export const useProductStore = defineStore('product', () => {
         formData.append('category_id',category_id)
         formData.append('image', imageFile)
         try{
-            const res = await axios.put('http://192.168.100.11:5000/put_product',formData,{
+            const res = await axios.put('127.0.0.1:5000/put_product',formData,{
                 headers: { 'Content-Type': 'multipart/form-data' }
             })
             const product = products.value.find((p)=>p.id === id)
@@ -112,7 +112,7 @@ export const useProductStore = defineStore('product', () => {
 
     async function deleteProduct(id){
         try{
-            const res = await axios.delete(`http://192.168.100.11:5000/delete_product/${id}`)
+            const res = await axios.delete(`http://127.0.0.1:5000/delete_product/${id}`)
             products.value = products.value.filter((p)=> p.id !== id)
             console.log(page.value);
             return res.data.message

@@ -76,8 +76,8 @@ onUnmounted(() => {
             <div class="overflow-ellipsis overflow-clip">{{ c.id }}</div>
             <div class="overflow-ellipsis overflow-clip">{{ c.name }}</div>
             <div>
-              <img @click="handleZoomImage('http://192.168.100.11:5000/storage/categories/' + c.image)" v-if="c.image"
-                :src="'http://192.168.100.11:5000/storage/categories/' + c.image" alt=""
+              <img @click="handleZoomImage('http://127.0.0.1:5000/storage/categories/' + c.image)" v-if="c.image"
+                :src="'http://127.0.0.1:5000/storage/categories/' + c.image" alt=""
                 class="w-10 object-cover h-10 rounded-xl cursor-zoom-in">
               <span v-else>N/A</span>
             </div>
