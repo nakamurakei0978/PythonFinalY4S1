@@ -3,7 +3,7 @@
 * node required <br/>
 * python required <br/>
 * server folder(Flask):
-  - create new venv: python3 -m venv venv
+  - create new venv: python3 -m venv .venv
   - use venv: .\venv\Scripts\activate
   - install requirements.txt: pip install -r requirements.txt
   - run project: flask run --debug --host 0.0.0.0
