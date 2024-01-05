@@ -57,7 +57,7 @@ onMounted(() => {
     price.value = productStore.editProduct.price
     category_id.value = productStore.editProduct.category_id
     imageName.value = productStore.editProduct.image
-    imageSrc.value = 'http://192.168.100.11:5000/storage/products/' + imageName.value
+    imageSrc.value = 'http://localhost:5000/storage/products/' + imageName.value
 })
 
 </script>

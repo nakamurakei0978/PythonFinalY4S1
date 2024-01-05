@@ -23,7 +23,7 @@ export const useCategoryStore = defineStore('category', () => {
         formData.append('image', imageFile)
         const res = await axios({
             method: 'POST',
-            url: 'http://192.168.100.11:5000/post_category',
+            url: 'http://localhost:5000/post_category',
             data: formData,
             headers: { 'Content-Type': 'multipart/form-data' },
         }).then(async (res) => {
@@ -40,7 +40,7 @@ export const useCategoryStore = defineStore('category', () => {
         limitRows.value = limit
         if (limit === 'All') {
             try {
-                const res = await axios.get('http://192.168.100.11:5000/get_categories')
+                const res = await axios.get('http://localhost:5000/get_categories')
                 totalPage.value = 1
                 page.value = 1
                 categories.value = res.data.categories
@@ -50,7 +50,7 @@ export const useCategoryStore = defineStore('category', () => {
             }
         } else {
             try {
-                const res = await axios.get(`http://192.168.100.11:5000/get_categories?limit=${limit}&page=${page.value}`)
+                const res = await axios.get(`http://localhost:5000/get_categories?limit=${limit}&page=${page.value}`)
                 totalPage.value = res.data.totalPage === 0 ? 1 : res.data.totalPage
                 categories.value = res.data.categories
                 return res.data.message
@@ -67,7 +67,7 @@ export const useCategoryStore = defineStore('category', () => {
         formData.append('image', imageFile)
         const res = await axios({
             method: 'PUT',
-            url: `http://192.168.100.11:5000/put_category/${id}`,
+            url: `http://localhost:5000/put_category/${id}`,
             data: formData,
             headers: { 'Content-Type': 'multipart/form-data' },
         }).then((res) => {
@@ -84,7 +84,7 @@ export const useCategoryStore = defineStore('category', () => {
     async function deleteCategory(id) {
         const res = await axios({
             method: 'DELETE',
-            url: `http://192.168.100.11:5000/delete_category/${id}`
+            url: `http://localhost:5000/delete_category/${id}`
         }).then(async (res) => {
             await getCategories(limitRows.value)
             return res.data.message
@@ -97,7 +97,7 @@ export const useCategoryStore = defineStore('category', () => {
     let holdSearchText=''
     async function searchCategories(search){
         try {
-            const res = await axios.get('http://192.168.100.11:5000/search_categories', {
+            const res = await axios.get('http://localhost:5000/search_categories', {
                 params: { search, limit: limitRows.value, page: page.value },
                 headers: { 'Content-Type': 'application/json' },
             })

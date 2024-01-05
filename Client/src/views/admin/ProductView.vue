@@ -98,8 +98,8 @@ onUnmounted(() => {
             <div>{{ formatToDollar(p.price) }}</div>
             <div>{{ getCategoryName(p.category_id) }}</div>
             <div>
-              <img @click="handleImageClick('http://192.168.100.11:5000/storage/products/' + p.image)" v-if="p.image"
-                :src="'http://192.168.100.11:5000/storage/products/' + p.image" alt=""
+              <img @click="handleImageClick('http://localhost:5000/storage/products/' + p.image)" v-if="p.image"
+                :src="'http://localhost:5000/storage/products/' + p.image" alt=""
                 class="w-10 object-cover h-10 rounded-xl cursor-zoom-in">
               <span v-else>N/A</span>
             </div>

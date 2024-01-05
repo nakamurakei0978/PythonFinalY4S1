@@ -50,7 +50,7 @@ onMounted(()=>{
     id.value = categoryStore.editCategory.id
     name.value = categoryStore.editCategory.name
     imageName.value = categoryStore.editCategory.image
-    imageSrc.value = 'http://192.168.100.11:5000/storage/categories/'+imageName.value
+    imageSrc.value = 'http://localhost:5000/storage/categories/'+imageName.value
 })
 
 </script>

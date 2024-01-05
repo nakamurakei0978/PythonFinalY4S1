@@ -68,7 +68,7 @@ function handleAddToCart(p, category_name) {
         <div v-if="!loading" class="grid place-items-center p-5 ">
             <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                 <div class="card card-compact w-80 bg-base-100 shadow-xl" v-for="p in productStore.products">
-                    <figure><img :src="'http://192.168.100.11:5000/storage/products/' + p.image" alt="Shoes" />
+                    <figure><img :src="'http://localhost:5000/storage/products/' + p.image" alt="Shoes" />
                     </figure>
                     <div class="card-body">
                         <div class="flex justify-between items-center">

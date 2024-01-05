@@ -48,7 +48,7 @@ async function handleCheckout() {
     if (cartStore.totalItems > 0) {
         if (authStore.isLoggedIn) {
             isCheckout.value = true
-            // const res = await fetch('http://192.168.100.11:5000/stripe_payment', {
+            // const res = await fetch('http://localhost:5000/stripe_payment', {
             //     method: 'POST',
             //     body: JSON.stringify({
             //         "items": cartStore.items
@@ -152,7 +152,7 @@ async function handleCheckout() {
                 <div>
                     <li class="flex py-6" v-for="i in cartStore.items">
                         <div class="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
-                            <img :src="'http://192.168.100.11:5000/storage/products/' + i.image"
+                            <img :src="'http://localhost:5000/storage/products/' + i.image"
                                 alt="Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch."
                                 class="h-full w-full object-cover object-center">
                         </div>

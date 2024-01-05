@@ -8,7 +8,7 @@ export const useAuthStore = defineStore('auth', () => {
   async function checkLogin(){
     try{
       const token = localStorage.getItem('token')
-      const res = await fetch('http://192.168.100.11:5000/verify-login',{
+      const res = await fetch('http://localhost:5000/verify-login',{
         headers: {
           'x-access-token': token
         }
@@ -23,7 +23,7 @@ export const useAuthStore = defineStore('auth', () => {
   async function checkAdmin(){
     try{
       const token = localStorage.getItem('token')
-      const res = await fetch('http://192.168.100.11:5000/verify-admin',{
+      const res = await fetch('http://localhost:5000/verify-admin',{
         headers: {
           'x-access-token': token
         }
