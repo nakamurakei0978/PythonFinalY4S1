@@ -14,7 +14,7 @@ onMounted(()=>{
         <div v-if="!loading" class="text-black rounded-xl relative h-full grid place-items-center">
             <div>
                 <p class="text-[200px]">Welcome</p>
-                <p>Project Final Y4S3</p>
+                <p>Project Final Y4S1</p>
                 <p>PYTHON FLASK With VUE3</p>
                 <p></p>
                 <p>Name: NAKAMURAKEI</p>
