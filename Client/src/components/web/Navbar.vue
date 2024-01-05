@@ -53,7 +53,7 @@ function handleLogout() {
 <template>
     <div class="navbar bg-base-100 sticky top-0 z-40 px-5">
         <div class="flex-none w-[96px]">
-            <a class="btn btn-ghost text-xl">Y4S3</a>
+            <a class="btn btn-ghost text-xl">Y4S1</a>
         </div>
         <ul class="menu menu-horizontal rounded-box flex-1 gap-2 justify-center">
             <li>
